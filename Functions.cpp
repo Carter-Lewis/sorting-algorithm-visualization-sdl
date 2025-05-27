@@ -64,7 +64,6 @@ void bubbleSort(SDL_Plotter& g, int data[WIDTH]) {
                 displayBar(g, data[j], j);
                 displayBar(g, data[j+1], j+1);
             }
-            
         }
         g.update();
 //      g.Sleep(5);
@@ -85,7 +84,7 @@ int partition(SDL_Plotter& g, int data[WIDTH], int left, int right) {
     displayBar(g, data[pivotIndex], pivotIndex);
     displayBar(g, data[left], left);
     
-    int i = left, j = right;
+    int i = left, j = right - 1;
 
     while(i < pivotIndex && j > pivotIndex) {
         while(data[i] < pivot) {
@@ -109,30 +108,12 @@ int partition(SDL_Plotter& g, int data[WIDTH], int left, int right) {
     }
     
     return pivotIndex;
-    
-    
-    
-//    int pivotValue = data[left];
-//    int index = left + 1;
-//    for(size_t i = left + 1; i <= right; ++i) {
-//        if(data[i] < pivotValue) {
-//            displayBar(g, data[i], i, true);
-//            displayBar(g, data[index], index, true);
-//            swap(data[i], data[index]);
-//            displayBar(g, data[i], i);
-//            displayBar(g, data[index], index);
-//            ++index;
-//            g.update();
-//        }
-//    }
-//    g.update();
-//    swap(data[left], data[index-1]);
-//    return index;
 }
+
 void quickSort    (SDL_Plotter& g, int data[WIDTH], int left, int right) {
     if(left >= right) return;
     int mid = partition(g, data, left, right);
-    quickSort(g, data, left, mid - 1);
+    quickSort(g, data, left, mid);
     quickSort(g, data, mid + 1, right);
 }
 
