@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
         if(key == 'b') bubbleSort(g, data);
         if(key == 'q') quickSort(g, data, 0, WIDTH);
         if(key == 'c') CountSort(g, data, HEIGHT);
-//        if(key == 'r') RadixSort(g, data);
+        if(key == 'r') RadixSort(g, data);
         if(key == 'r') {
             for(int i = 0; i < WIDTH; i++) {
                 displayBar(g, data[i], i, true);
