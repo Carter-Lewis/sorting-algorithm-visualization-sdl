@@ -11,4 +11,4 @@ Once the screen pops up, use these keybinds to run the program:
     r - randomly shuffle data
     b - bubble sort
     i - insertion sort
-    
+    q - quick sort    
