@@ -29,4 +29,4 @@
 - **b** — Bubble Sort  
 - **i** — Insertion Sort  
 - **q** — Quick Sort
-
+- **m** - Merge Sort
